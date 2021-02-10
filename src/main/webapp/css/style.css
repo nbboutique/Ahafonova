@@ -1,0 +1,310 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 февр. 2021 г., 18:57:39
+    Author     : mahafonova
+*/
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+
+main {
+    display: block
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+img {
+    border-style: none
+}
+
+button{
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: auto;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    background: #9F7A78;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    display: block
+}
+
+html {
+    font-size: 20px;
+    line-height: 30px
+}
+
+body {
+    color: white;
+    font-size: 1rem
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Heebo", sans-serif
+}
+
+a {
+    color: #F9425F;
+    text-decoration: none
+}
+
+a:hover,
+a:active {
+    outline: 0;
+    text-decoration: underline
+}
+
+h1 {
+    clear: both;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 56px;
+    letter-spacing: 0px
+}
+
+@media (min-width: 641px) {
+    h1 {
+        font-size: 48px;
+        line-height: 62px;
+        letter-spacing: 0px
+    }
+}
+
+h1 {
+    margin-top: 48px;
+    margin-bottom: 16px
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 24px
+}
+
+button {
+    font-size: 20px;
+    line-height: 30px
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+@media (min-width: 481px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px
+    }
+}
+
+.container {
+    max-width: 1128px
+}
+
+.mt-0 {
+    margin-top: 0
+}
+
+.button {
+    position: relative;
+    display: inline-flex;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    background-color: #493635;
+    color: #fff !important;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 16px 32px;
+    height: 48px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.button:hover {
+    animation: bounce 1s;
+}
+
+
+
+.hero {
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 24px
+}
+
+.hero-copy {
+    margin: auto;
+}
+
+.hero-paragraph {
+    margin-bottom: 32px
+}
+
+.device-mockup {
+    position: relative;
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), -webkit-transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005);
+    transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005);
+    transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), -webkit-transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005)
+}
+
+.hero-cta {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px
+}
+
+@media (max-width: 639px) {
+    .hero-cta .button {
+        display: flex
+    }
+    .hero-cta .button+.button {
+        margin-top: 16px
+    }
+}
+
+@media (min-width: 641px) {
+    .hero {
+        position: relative;
+        text-align: left;
+        padding-top: 56px;
+        padding-bottom: 12px
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        width: 415px;
+        height: 461px;
+    }
+    .hero-inner {
+        display: flex;
+        justify-content: space-between
+    }
+    .hero-copy {
+        padding-top: 88px;
+        padding-right: 48px;
+        min-width: 448px;
+        max-width: 588px
+    }
+    .hero-title {
+        margin-bottom: 24px
+    }
+    .hero-paragraph {
+        margin-bottom: 40px
+    }
+    .device-mockup {
+        max-width: none
+    }
+    .hero-cta {
+        margin: 0
+    }
+    .hero-cta .button {
+        min-width: 170px
+    }
+    .hero-cta .button:first-child {
+        margin-right: 16px
+    }
+}
+
+main {
+    flex: 1 0 auto
+}
+.Texta{
+    margin: auto;
+    margin-left: 90px
+}
+
+
+
+
+
+.radio{
+     margin: auto;
+    margin-left: 75px;
+}
+
+.lng{
+     margin: auto;
+    margin-left: 55px
+}
