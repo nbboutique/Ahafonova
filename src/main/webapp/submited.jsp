@@ -29,8 +29,7 @@
                            <span  class="lng"> <%  String[] languages = request.getParameterValues("language");
                             if (languages != null) {
                                     for (int i = 0; i < languages.length; i++) {
-                                        out.print(languages[i]);
-                                        out.print(", ");
+                                        out.print(languages[i]+" ");
                                     }                 
                                         }else {
                                         out.print("Unselected");
