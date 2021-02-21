@@ -43,7 +43,6 @@ img {
 button{
     font-family: sans-serif;
     font-size: 100%;
-    line-height: 1.15;
     margin: auto;
     overflow: visible;
     text-transform: none;
@@ -194,9 +193,7 @@ button {
 	}
 }
 
-.button:hover {
-    animation: bounce 1s;
-}
+
 
 
 

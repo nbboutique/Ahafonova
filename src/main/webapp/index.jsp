@@ -24,6 +24,7 @@
 	                        <p class="hero-paragraph">I am a second year student of the Faculty of Information Technology at the Department of Network and Internet Technologies</p>
 	                        <div class="hero-cta"> <form action="<%=request.getContextPath()%>/form" method="get">
                                         <input class="button" type="submit" value="Next"/>
+                                        <input class="button" type="submit" value="Open the chart"/>
                                     </form></div>
 						</div>
 							

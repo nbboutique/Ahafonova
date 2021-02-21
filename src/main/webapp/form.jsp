@@ -22,6 +22,7 @@
             <section class="hero">
                 <div class="container">
 			<div class="hero-copy">
+                        <form action="<%=request.getContextPath()%>/form" method="post">
                             <h1 class="hero-title mt-0">Fill in the form. </h1>
                         <p>
                             Name: <input class="Texta" type="text" name="name" required>
@@ -39,8 +40,13 @@
                                      <input class="lng" type="checkbox" name="language" value="English">English</input>  
                                      <input class="lng" type="checkbox" name="language" value="English">German</input> 
                         </p>
-                       
+                        Are you admin?
+                                    <div class="lng">
+                                            <input type="checkbox" name="isAdmin" value="on">
+                                    </div>
+
 	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
+                        </form>
                     </div>
                 </div>
             </section>
