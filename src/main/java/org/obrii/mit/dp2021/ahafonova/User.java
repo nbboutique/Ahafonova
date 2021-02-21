@@ -9,13 +9,13 @@ public class User implements UserInterface {
     private String gender;
     private List<String> language;
     private String country;
-    private boolean isAdmin;
+    private boolean isTeacher;
 
     
     public User() {
     }
 
-    public User(String name, String gender, String[] language, String country, boolean isAdmin) {
+    public User(String name, String gender, String[] language, String country, boolean isTeacher) {
         this.name = name;
         this.gender = gender;
         
@@ -24,7 +24,7 @@ public class User implements UserInterface {
         }
         
         this.country = country;
-        this.isAdmin=isAdmin;
+        this.isTeacher= isTeacher;
     }
 
     @Override
@@ -69,8 +69,8 @@ public class User implements UserInterface {
 
     
     @Override
-    public String getIsAdmin() {
-        return isAdmin ? "You`re admin":"You`re standart user";
+    public String getIsTeacher() {
+        return isTeacher ? "You`re teacher":"You`re standart user";
     }
 
     

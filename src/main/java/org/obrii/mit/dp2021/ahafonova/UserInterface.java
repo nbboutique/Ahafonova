@@ -16,5 +16,5 @@ public interface UserInterface {
     String getCountry();
     void setCountry(String country);
     
-    String getIsAdmin();
+    String getIsTeacher();
 }

@@ -17,7 +17,7 @@ public abstract class Application {
         request.getParameter("country"),false);
     }
     
-    public abstract void setUser(HttpServletRequest request, boolean isAdmin);
+    public abstract void setUser(HttpServletRequest request, boolean isTeacher);
     
     final public UserInterface getUser(){
     return user;
