@@ -25,7 +25,7 @@ public class UserDataServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Application app = new AdminApplication();
+        Application app = new TeacherApplication();
         
         if(request.getParameter("isTeacher")!=null) {
             app.setUser(request, true);
