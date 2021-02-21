@@ -13,6 +13,9 @@ public interface UserInterface {
     List<String> getLanguage();
     void setLanguage(List<String> language);
     
+    List<String> getClasses();
+    void setClasses(List<String> classes);
+    
     String getCountry();
     void setCountry(String country);
     

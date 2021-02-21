@@ -54,6 +54,18 @@
         }
     %>
     </p><br>
+    <p>Classes is:
+    <%
+    List<String> classe = user.getClasses();
+    if (classes != null) {
+    for (int i = 0; i < classes.size(); i++) {
+            out.print(classes.get(i)+" ");
+        }                 
+        }else {
+        out.print("no choose");
+        }
+    %>
+    </p><br>
     <br>
     <p>Country: 
     <%

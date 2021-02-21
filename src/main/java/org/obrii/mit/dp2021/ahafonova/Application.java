@@ -14,6 +14,7 @@ public abstract class Application {
         request.getParameter("name"),
         request.getParameter("gender"),
         request.getParameterValues("language"),
+        request.getParameterValues("classes"),
         request.getParameter("country"),false);
     }
     

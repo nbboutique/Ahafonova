@@ -8,21 +8,25 @@ public class User implements UserInterface {
     private String name;
     private String gender;
     private List<String> language;
+    private List<String> classes;
     private String country;
     private boolean isTeacher;
+    
 
     
     public User() {
     }
 
-    public User(String name, String gender, String[] language, String country, boolean isTeacher) {
+    public User(String name, String gender, String[] language, String[] classes, String country, boolean isTeacher) {
         this.name = name;
         this.gender = gender;
         
         if (language != null ){
             this.language = Arrays.asList(language);
         }
-        
+        if (classes != null ){
+            this.classes = Arrays.asList(classes);
+        }
         this.country = country;
         this.isTeacher= isTeacher;
     }
@@ -56,6 +60,15 @@ public class User implements UserInterface {
     public void setLanguage(List<String> language) {
         this.language = language;
     }
+    @Override
+    public List<String> getClasses() {
+        return classes;
+    }
+
+    @Override
+    public void setClasses(List<String> classes) {
+        this.classes = classes;
+    }
 
     @Override
     public String getCountry() {
@@ -76,7 +89,7 @@ public class User implements UserInterface {
     
     @Override
     public String toString() {
-        return "User{" + "name=" + name + ", gender=" + gender + ", language=" + language + ", country=" + country + '}';
+        return "User{" + "name=" + name + ", gender=" + gender + ", classes=" + classes + ", language=" + language + ", country=" + country + '}';
     }
 
 }

@@ -36,11 +36,16 @@
                                     <span class="radio"><input type="radio" name="gender" value="Female">Female</span>
                         </p>
                         <p>
-                           Language: <input class="lng" type="checkbox" name="language" value="Ukrainian">Ukrainian</input>
+                           Language: <input class="lng" type="checkbox" name="language" value="Ukrainian">Russian</input>
                                      <input class="lng" type="checkbox" name="language" value="English">English</input>  
+                                     <input class="lng" type="checkbox" name="language" value="English">Arabic</input> 
+                        </p>
+                        <p>
+                           Classes: <input class="lng" type="checkbox" name="language" value="Ukrainian">Math</input>
+                                     <input class="lng" type="checkbox" name="language" value="English">Geometry</input>  
                                      <input class="lng" type="checkbox" name="language" value="English">German</input> 
                         </p>
-                        Are you admin?
+                        Are you teacher?
                                     <div class="lng">
                                             <input type="checkbox" name="isTeacher" value="on">
                                     </div>
