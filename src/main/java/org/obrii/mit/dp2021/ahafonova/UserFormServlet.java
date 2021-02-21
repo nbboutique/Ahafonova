@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "UserDataServlet", urlPatterns = {"/form"})
-public class UserDataServlet extends HttpServlet {
+@WebServlet(name = "UserFormServlet", urlPatterns = {"/form"})
+public class UserFormServlet extends HttpServlet {
 
    
     @Override
@@ -38,6 +38,7 @@ public class UserDataServlet extends HttpServlet {
 
     @Override
     public String getServletInfo() {
+        
         return "Short description";
     }
 

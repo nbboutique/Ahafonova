@@ -23,9 +23,9 @@
                 <div class="container">
 			<div class="hero-copy">
                         <form action="<%=request.getContextPath()%>/form" method="post">
-                            <h1 class="hero-title mt-0">Fill in the form. </h1>
+                            <h1 class="hero-title mt-0">Take a little quiz</h1>
                         <p>
-                            Name: <input class="Texta" type="text" name="name" required>
+                            Your name: <input class="Texta" type="text" name="name" required>
                         </p>
                         <p>
                             Country : <input class="Texta" type="text" name="country" required>
@@ -41,7 +41,7 @@
                                      <input class="lng" type="checkbox" name="language" value="English">Arabic</input> 
                         </p>
                         <p>
-                           Classes: <input class="lng" type="checkbox" name="language" value="Ukrainian">Math</input>
+                           Subjects you know: <input class="lng" type="checkbox" name="language" value="Ukrainian">Math</input>
                                      <input class="lng" type="checkbox" name="language" value="English">Geometry</input>  
                                      <input class="lng" type="checkbox" name="language" value="English">German</input> 
                         </p>
