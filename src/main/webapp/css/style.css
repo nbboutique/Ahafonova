@@ -39,6 +39,12 @@ a {
 img {
     border-style: none
 }
+imgg {
+    border-style: none;
+    margin: auto;
+    height: 250px;
+    width: 350px;
+}
 
 button{
     font-family: sans-serif;

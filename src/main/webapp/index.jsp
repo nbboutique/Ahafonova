@@ -22,7 +22,7 @@
 			<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Welcome to my page!</h1>
 	                        <p class="hero-paragraph">I am a second year student of the Faculty of Information Technology at the Department of Network and Internet Technologies</p>
-                                <img src="img/chart.png" alt="photo">
+                                <img class="imgg" src="img/chart.png" alt="photo" >
 	                        <div class="hero-cta"> <form action="<%=request.getContextPath()%>/form" method="get">
                                         <input class="button" type="submit" value="Next"/>
                                         
