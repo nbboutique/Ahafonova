@@ -33,7 +33,7 @@ public class UserDataServlet extends HttpServlet {
         else app.setUser(request);
         
         request.setAttribute("app", app);
-        request.getRequestDispatcher("submit.jsp").forward(request, response);
+        request.getRequestDispatcher("submited.jsp").forward(request, response);
     }
 
     @Override
