@@ -8,7 +8,6 @@
 <%@page import="org.obrii.mit.dp2021.Ahafonova.UserInterface"%>
 <%@page import="org.obrii.mit.dp2021.Ahafonova.Application"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,7 +55,7 @@
     </p><br>
     <p>Classes is:
     <%
-    List<String> classe = user.getClasses();
+    List<String> classes = user.getClasses();
     if (classes != null) {
     for (int i = 0; i < classes.size(); i++) {
             out.print(classes.get(i)+" ");

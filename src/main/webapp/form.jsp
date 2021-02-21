@@ -16,7 +16,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
    <body>
-      <form action="/Ahafonova/form" method="post">
+      <form action="<%=request.getContextPath()%>/form" method="post">
           <input type="hidden" name="title" value="Submited"/>
       <main>
             <section class="hero">
@@ -38,19 +38,21 @@
                         <p>
                            Language: <input class="lng" type="checkbox" name="language" value="Ukrainian">Russian</input>
                                      <input class="lng" type="checkbox" name="language" value="English">English</input>  
-                                     <input class="lng" type="checkbox" name="language" value="English">Arabic</input> 
+                                     <input class="lng" type="checkbox" name="language" value="Arabic">Arabic</input> 
                         </p>
                         <p>
-                           Subjects you know: <input class="lng" type="checkbox" name="language" value="Ukrainian">Math</input>
-                                     <input class="lng" type="checkbox" name="language" value="English">Geometry</input>  
-                                     <input class="lng" type="checkbox" name="language" value="English">German</input> 
+                           Subjects you know: 
+                                     <input class="lng" type="checkbox" name="classes" value="Math">Math</input>
+                                     <input class="lng" type="checkbox" name="classes" value="Geometry">Geometry</input>  
+                                     <input class="lng" type="checkbox" name="classes" value="German">German</input> 
                         </p>
                         Are you teacher?
                                     <div class="lng">
                                             <input type="checkbox" name="isTeacher" value="on">
                                     </div>
+	                      
 
-	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
+                        <div class="hero-cta"><input class="button"  type="submit" value="Submit"></div>
                         </form>
                     </div>
                 </div>
