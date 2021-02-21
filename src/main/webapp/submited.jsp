@@ -67,7 +67,7 @@
     <br>
     <p>Privileges:  
     <%=
-        user.getIsAdmin()
+        user.getIsTeacher()
     %>
     </p>
                                     

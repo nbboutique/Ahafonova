@@ -42,7 +42,7 @@
                         </p>
                         Are you admin?
                                     <div class="lng">
-                                            <input type="checkbox" name="isAdmin" value="on">
+                                            <input type="checkbox" name="isTeacher" value="on">
                                     </div>
 
 	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
