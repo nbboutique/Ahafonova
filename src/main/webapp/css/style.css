@@ -194,9 +194,6 @@ button {
 	}
 }
 
-.button:hover {
-    animation: bounce 1s;
-}
 
 
 
