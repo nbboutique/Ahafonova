@@ -14,8 +14,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>first page</title>
     </head>
-    
-        <h1>Hello World!</h1>
+    <body style="background-color:lightpink; margin: auto;">
+        <div style="margin: auto;">
+        <h1 style="margin-left: 40%">Hello World!</h1>
         
         <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
         
@@ -23,12 +24,14 @@
            String filterString = request.getParameter("filter");
            if(filterString == null){filterString= "";}
         %>
-    
-        <table border="1">
-            <form action="<%=request.getContextPath()%>/table" method="get">
+            
+        <table border="1" style="background-color:ghostwhite; margin: auto;">
+            <div style="margin-left: 40%; margin-bottom:  2%; margin-top: 2%;">
+            <form action="<%=request.getContextPath()%>/table" method="get" style="margin-left: 50%">
                 <input type="text"  name="filter" value="<%=filterString%>">
                  <input type="submit" value="search">
             </form>
+            </div>
 
             <tr>
                 <th>id</th>
@@ -87,8 +90,11 @@
             
             <%}}%>
         </table>
-        
-        <form action="form.jsp">
-                <input type="submit" value="Add data" style="background-color:yellow">
+        <div style="margin-left: 50%; margin-top: 2%;">
+        <form action="form.jsp" >
+                <input type="submit" value="Add data" style="background-color:yellow; margin: auto;">
             </form>
+            <div>
+        </div>
+    </body>
 </html>

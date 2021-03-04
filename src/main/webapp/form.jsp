@@ -11,10 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Form</title>
     </head>
-    <body>
-        <h1>Data</h1>
+    <body style="background-color:lightpink">
+        <h1 style="margin-left: 40%">Data</h1>
         
-        <form action="<%=request.getContextPath()%>/table" method="post">
+        <form action="<%=request.getContextPath()%>/table" method="post" style="margin-left: 40%">
             
             <input type="hidden" name="id" value="0" /> 
             <p>Name:

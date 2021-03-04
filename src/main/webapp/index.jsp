@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body  style="background-color:lightpink; margin: auto;">
         <h1>Hello World!</h1>
         <form action="<%=request.getContextPath()%>/table" method="get">
                 <input  type="submit" value="Next"> 
