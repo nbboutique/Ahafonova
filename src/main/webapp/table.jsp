@@ -18,8 +18,18 @@
         <h1>Hello World!</h1>
         
         <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
+        
+        <%
+           String filterString = request.getParameter("filter");
+           if(filterString == null){filterString= "";}
+        %>
     
-        <table>
+        <table border="1">
+            <form action="<%=request.getContextPath()%>/table" method="get">
+                <input type="text"  name="filter" value="<%=filterString%>">
+                 <input type="submit" value="search">
+            </form>
+
             <tr>
                 <th>id</th>
                 <th>name</th>
@@ -28,7 +38,23 @@
                 <th>update</th>
                 <th>delete</th>
             </tr>
-            <%for(Data data:dataList){ %>
+            
+             <%-- 
+            <%
+                  
+            String query = request.getParameter("q");
+            String data1;
+            if(query!=null){
+                data1 = "select * from crud where name like '%"+query+"%' or email like '%"+query+"%'or country like '%"+query+"%' ";
+            }
+            else{
+                data1 = "select * from crud order by id desc";
+            }
+            %>
+            --%>
+           <% for(Data data:dataList){
+               if(data.getName().contains(filterString)){
+           %>
             <tr>
                 <td><%=data.getId()%></td>
                 <td><%=data.getName()%></td>
@@ -44,7 +70,7 @@
                         
                             <input type="hidden" name="country" value="<%=data.getCountry()%>"/> 
 
-                        <input type="submit" value="Update" />
+                        <input type="submit" value="Update" style="background-color:green" />
                     </form>
                     
                 </td>
@@ -52,17 +78,17 @@
                     <form action="<%=request.getContextPath()%>/form" method="get">
                         <input type="hidden" name="id" value="<%=data.getId()%>" /> 
                         
-                        <input type="submit" value="Delete" />
+                        <input type="submit" value="Delete" style="background-color:red" />
                     </form>
                 </td>
                 
             </tr>
             
             
-            <%}%>
+            <%}}%>
         </table>
         
         <form action="form.jsp">
-                <input type="submit" value="Add data">
+                <input type="submit" value="Add data" style="background-color:yellow">
             </form>
 </html>
