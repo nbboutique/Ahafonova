@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>UserFormServlet</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.Ahafonova.UserFormServlet</servlet-class>
+        <servlet-name>DataServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.ahafonova.data.servlet.DataServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>User</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.Ahafonova.User</servlet-class>
+        <servlet-name>FormServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.ahafonova.data.servlet.FormServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserFormServlet</servlet-name>
+        <servlet-name>DataServlet</servlet-name>
+        <url-pattern>/table</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormServlet</servlet-name>
         <url-pattern>/form</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
-        <servlet-name>User</servlet-name>
-        <url-pattern>/User</url-pattern>
-    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
-    
 </web-app>
