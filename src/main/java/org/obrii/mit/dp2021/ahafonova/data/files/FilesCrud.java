@@ -5,6 +5,7 @@
  */
 package org.obrii.mit.dp2021.ahafonova.data.files;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,10 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-
 import org.obrii.mit.dp2021.ahafonova.data.Data;
 import org.obrii.mit.dp2021.ahafonova.data.servlet.CrudDataInterface;
+
+
+
 
 /**
  *
@@ -43,9 +45,11 @@ public class FilesCrud implements CrudDataInterface {
         this.file = file;
     }
 
-  
-
-   
+    /**
+     *
+     * @param data
+     */
+    @Override
     public void writeData(List<Data> data) {
 
         try ( FileOutputStream f = new FileOutputStream(file);  ObjectOutputStream o = new ObjectOutputStream(f)) {
@@ -85,6 +89,14 @@ public class FilesCrud implements CrudDataInterface {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
             return new ArrayList<Data>();
         }
+
+    }
+    @Override
+    public void createData(Data addingData) {
+        List<Data> data = this.readData();
+        addingData.setId(data.size());
+        data.add(addingData);
+        this.writeData(data);
 
     }
     

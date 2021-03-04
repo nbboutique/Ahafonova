@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.obrii.mit.dp2021.ahafonova.data.Data;
 import org.obrii.mit.dp2021.ahafonova.data.files.Config;
 import org.obrii.mit.dp2021.ahafonova.data.files.FilesCrud;
-import org.obrii.mit.dp2021.ahafonova.storeHouse.StoreCrud;
 
 
 /**
@@ -59,6 +58,7 @@ public class DataServlet extends HttpServlet {
             throws ServletException, IOException {
 
         if (Config.getFileName().equals("")) {
+            System.out.println("jdfnlkfn");
             Config.setFileName(this.getServletContext().getRealPath("") + "data.txt");
             storeCrud = new FilesCrud(new File(Config.getFileName()));
         }
@@ -96,6 +96,18 @@ public class DataServlet extends HttpServlet {
         doGet(request, response);
 
     }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+                
+                storeCrud.createData(
+                new Data(Integer.parseInt(request.getParameter("id")),
+                        request.getParameter("name"),
+                        request.getParameter("email"),
+                        request.getParameter("country") ));
+                doGet(request, response);
+            }
+    
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

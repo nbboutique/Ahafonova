@@ -22,4 +22,6 @@ public interface CrudDataInterface {
     
     
     public void newData() ;
+
+    public void createData(Data addingData);
 }
