@@ -5,6 +5,7 @@
  */
 package org.obrii.mit.dp2021.ahafonova.data.servlet;
 
+
 import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.obrii.mit.dp2021.ahafonova.data.Data;
 import org.obrii.mit.dp2021.ahafonova.data.files.Config;
 import org.obrii.mit.dp2021.ahafonova.data.files.FilesCrud;
+import org.obrii.mit.dp2021.ahafonova.database.DataBaseCrud;
 
 
 /**
@@ -25,14 +27,12 @@ import org.obrii.mit.dp2021.ahafonova.data.files.FilesCrud;
 @WebServlet(name = "DataServlet", urlPatterns = {"/table"})
 public class DataServlet extends HttpServlet {
     
-    
-
-
-
-    
-        CrudDataInterface storeCrud = new FilesCrud(new File(Config.getFileName()));
-    
-
+    CrudDataInterface storeCrud = new FilesCrud(new File(Config.getFileName()));
+    /*
+    private void setTechnology(){
+        storeCrud = new DataBaseCrud();
+    }
+*/
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
