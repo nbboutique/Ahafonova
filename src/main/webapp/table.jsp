@@ -34,7 +34,7 @@
             </div>
 
             <tr>
-                <th>id</th>
+               
                 <th>name</th>
                 <th>email</th>
                 <th>country</th>
@@ -59,7 +59,7 @@
                if(data.getName().contains(filterString)){
            %>
             <tr>
-                <td><%=data.getId()%></td>
+                <%-- <td><%=data.getId()%></td>--%> 
                 <td><%=data.getName()%></td>
                 <td><%=data.getEmail()%></td>
                 <td><%=data.getCountry()%></td>

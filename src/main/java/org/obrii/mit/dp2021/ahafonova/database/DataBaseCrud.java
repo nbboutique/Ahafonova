@@ -5,17 +5,15 @@
  */
 package org.obrii.mit.dp2021.ahafonova.database;
 
-import org.obrii.mit.dp2021.ahafonova.storeHouse.*;
 import java.io.File;
-import static java.lang.Integer.parseInt;
-import static java.lang.System.out;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+import java.util.logging.Level;
 import org.obrii.mit.dp2021.ahafonova.data.Data;
 
 /**
@@ -24,57 +22,100 @@ import org.obrii.mit.dp2021.ahafonova.data.Data;
  */
 public class DataBaseCrud {
    
+  private Connection connect;
+  private Statement statement;
+  private int id;
     
-        
-    
-    public DataBaseCrud() throws SQLException{
-        List<Data> datalist = new ArrayList<>();
-            Connection connection = PostgreConnection.connect();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from data");            
-            while( resultSet.next()){
-            datalist.add(new Data(Integer.parseInt(resultSet.getString(1))  ,
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4) ));
-            
-            
-            }
+    public DataBaseCrud(){
+            try{
+                Class.forName("org.postgresql.Driver");
+                this.connect = DriverManager.getConnection("jdbc:postgresql://obrii.org:5432/db2021mit21s1", "s1", "5697");
+                this.connect.setAutoCommit(false);
+                this.statement = this.connect.createStatement();
+            }catch (Exception e){
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+            try{
+            statement.executeUpdate("CREATE TABLE IF NOT EXISTS data (id integer primary key not null, name text not null, email text not null, country text not null);");
+            connect.commit();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+            id = 1;
     }
         
-   /*
-
-    public DataBaseCrud(File file) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+   
     public void createData(Data data) {
-        data.setId(dataList.size());
-        dataList.add(data);
-    
-    }*/
-    /*
-    public List<Data> readData() throws SQLException{
-        List<Data> datalist = new ArrayList<>();
-    Connection connection = PostgreConnection.connect();
-    Statement statement ;
-    try{
-        statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select * from data");
-    
-    }catch(SQLException ex){
-        Logger.getLogger(DataBaseCrud.class.getName().log(Level.SERVE, null,))
+        List<Data> datasize = this.readData();
+        data.setId(this.id);
+        try{
+            statement.executeUpdate(String.format("INSERT INTO data (id, name, email, country) VALUES (%d, '%s', '%s', '%s');",
+                data.getId(), data.getName(), data.getEmail(), data.getCountry()));
+            connect.commit();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        id=id+1;
     }
     
-    
-        return dataList;
-    
+    public List<Data> readData(){
+        try {
+            ResultSet result = this.statement.executeQuery("SELECT * FROM data");
+            List<Data> data = new ArrayList<>();
+
+            while (result.next()) {
+                data.add(new Data(
+                        result.getInt("id"),
+                        result.getString("name"),
+                        result.getString("email"),
+                        result.getString("country")
+                ));
+            }
+
+            return data;
+        } 
+        catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+            return new ArrayList<>();
+        }
     }
-    */
+    
     public void updateData(int id, Data data) {
         
+        try{
+            statement.executeUpdate(String.format("UPDATE data "
+                        + "SET name='" + data.getName() + "', "
+                        + "email='" + data.getEmail() + "', "
+                         + "country='" + data.getCountry() + "' "
+                + "WHERE id="+id
+                ));
+            connect.commit();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
     }
     public void deleteData(int id) {
-        
+        try{
+            statement.executeUpdate("DELETE FROM data WHERE id="+id);
+            connect.commit();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
     }
 }
