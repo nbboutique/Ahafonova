@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 /**
  *
@@ -19,6 +19,7 @@ import org.springframework.data.annotation.Id;
 public class Data implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private int id;
     private String name;
     private String email;

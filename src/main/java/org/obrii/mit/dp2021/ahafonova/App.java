@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.ahafonova.spr;
+package org.obrii.mit.dp2021.ahafonova;
 
 /**
  *

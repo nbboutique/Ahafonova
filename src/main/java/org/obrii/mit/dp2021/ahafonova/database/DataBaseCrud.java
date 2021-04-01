@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package org.obrii.mit.dp2021.ahafonova.database;
-
+/*
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,6 +20,7 @@ import org.obrii.mit.dp2021.ahafonova.data.Data;
  *
  * @author mahafonova
  */
+/*
 public class DataBaseCrud {
    
   private Connection connect;
@@ -47,9 +48,9 @@ public class DataBaseCrud {
             System.exit(0);
         }
             id = 1;*/
-    }
+   // }*/
         
-   
+   /*
     public void createData(Data data) {
         List<Data> datasize = this.readData();
         data.setId(this.id);
@@ -118,4 +119,4 @@ public class DataBaseCrud {
             System.exit(0);
         }
     }
-}
+}*/

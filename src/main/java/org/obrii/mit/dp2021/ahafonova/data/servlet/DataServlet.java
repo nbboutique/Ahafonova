@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
 package org.obrii.mit.dp2021.ahafonova.data.servlet;
 
 
@@ -13,17 +14,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.obrii.mit.dp2021.ahafonova.data.Data;
-import org.obrii.mit.dp2021.ahafonova.database.DataBaseCrud;
 
 
 /**
  *
  * @author mahafonova
  */
-
-@WebServlet(name = "DataServlet", urlPatterns = {"/table"})
+/*
+@WebServlet(name = "DataServlet", urlPatterns = {"/DataServletOld"})
 public class DataServlet extends HttpServlet {
-    DataBaseCrud storeCrud = new DataBaseCrud();
+    BDServlet storeCrud = new BDServlet();
    
 
     @Override
@@ -76,4 +76,4 @@ public class DataServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
+}*/

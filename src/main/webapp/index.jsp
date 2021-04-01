@@ -13,7 +13,7 @@
     </head>
     <body  style="background-color:lightpink; margin-left: 40%;">
         <h1>Hello World!</h1>
-        <form action="<%=request.getContextPath()%>/table" method="get">
+        <form action="<%=request.getContextPath()%>/DataBase" method="get">
                 <input  type="submit" value="Next"> 
                 </form>
     </body>

@@ -36,16 +36,16 @@ public class DataBaseSpring {
     
             
     public ArrayList<Data> sortingData(String s){
- Iterable<Data> set = BDI.findAll();
-Iterator<Data> iterator = set.iterator();
- ArrayList<Data> list = new ArrayList<Data>();
-        
- while(iterator.hasNext())
- {
- Data item = iterator.next();
- if(item.getName().contains(s)){
- list.add(item);
- }
+        Iterable<Data> set = BDI.findAll();
+       Iterator<Data> iterator = set.iterator();
+        ArrayList<Data> list = new ArrayList<Data>();
+
+        while(iterator.hasNext())
+        {
+        Data item = iterator.next();
+        if(item.getName().contains(s)){
+        list.add(item);
+        }
 
  }
 
@@ -62,10 +62,12 @@ Iterator<Data> iterator = set.iterator();
     BDI.deleteById(id);
     }
     public void updateData(Data data,Integer id){
+    Data upD = BDI.findById(id).get();
+        upD.setName(data.getName());
+        upD.setEmail(data.getEmail());
+        upD.setCountry(data.getCountry());
     
-    data.setId(id);
-    BDI.deleteById(id);
-    BDI.save(data);
+    BDI.save(upD);
     }
     
 }
