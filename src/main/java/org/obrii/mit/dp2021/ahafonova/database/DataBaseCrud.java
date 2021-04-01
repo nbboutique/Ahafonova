@@ -26,7 +26,7 @@ public class DataBaseCrud {
   private Statement statement;
   private int id;
     
-    public DataBaseCrud(){
+    public DataBaseCrud(){/*
             try{
                 Class.forName("org.postgresql.Driver");
                 this.connect = DriverManager.getConnection("jdbc:postgresql://obrii.org:5432/db2021mit21s1", "s1", "5697");
@@ -46,7 +46,7 @@ public class DataBaseCrud {
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
-            id = 1;
+            id = 1;*/
     }
         
    

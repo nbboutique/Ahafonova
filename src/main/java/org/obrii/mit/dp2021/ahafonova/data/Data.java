@@ -6,12 +6,19 @@
 package org.obrii.mit.dp2021.ahafonova.data;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
 
 /**
  *
  * @author mahafonova
  */
+@Entity
 public class Data implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String email;
