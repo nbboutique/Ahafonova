@@ -6,7 +6,9 @@
 package org.obrii.mit.dp2021.ahafonova.data.servlet;
 
 import java.io.IOException;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,8 +17,16 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author mahafonova
  */
+@WebServlet(name = "FormServlet", urlPatterns = {"/table"})
 public class FormServlet extends HttpServlet {
-    DataServlet dataServlet = new DataServlet();
+    BDServlet dataServlet;
+    
+    @Override
+    public void init(ServletConfig config) throws ServletException{
+        super.init(config);
+        dataServlet = new BDServlet();
+        dataServlet.init(config);
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,7 +50,7 @@ public class FormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        dataServlet.doDelete(request, response);
+                dataServlet.doDelete(request,response);
     }
 
     /**

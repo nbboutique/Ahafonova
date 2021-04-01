@@ -30,6 +30,12 @@ public class Data implements Serializable{
         this.email = email;
         this.country = country;
     }
+    public Data(String name, String email, String country) {
+        
+        this.name = name;
+        this.email = email;
+        this.country = country;
+    }
 
     public int getId() {
         return id;
