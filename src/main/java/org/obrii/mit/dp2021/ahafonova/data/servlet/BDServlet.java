@@ -23,7 +23,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
  * @author mahafonova
  */
 
-@WebServlet(name = "BDServlet", urlPatterns = {"/DataBase"})
+@WebServlet(name = "BDServlet", urlPatterns = {"/table"})
 public class BDServlet extends HttpServlet {
     String  formType1 = "update"; 
     
@@ -73,9 +73,9 @@ public class BDServlet extends HttpServlet {
             //}
             
             
-            // request.getRequestDispatcher("home.jsp").forward(request, response);
+            
         }
-        request.getRequestDispatcher("home.jsp").forward(request, response); 
+        request.getRequestDispatcher("table.jsp").forward(request, response); 
     }
 
     @Override
@@ -86,7 +86,6 @@ public class BDServlet extends HttpServlet {
                 Data newData = new Data(request.getParameter("name"),request.getParameter("email"),request.getParameter("country"));
                 
                 BaseSpring.createData(newData);
-                //baseI.addData("('"+request.getParameter("name")+"','"+Integer.parseInt(request.getParameter("age"))+"')","users(name, age)");
                 doGet(request, response);
     }
 

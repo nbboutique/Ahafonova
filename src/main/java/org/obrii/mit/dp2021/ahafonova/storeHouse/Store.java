@@ -22,7 +22,7 @@ public class Store {
         private static Store storeInstance = new Store();
         private Store(){
             dataStore = new ArrayList<>();
-            dataStore.add(new Data(0,"Name", "Email","Country"));
+            //dataStore.add(new Data(0,"Name", "Email","Country"));
             
     }
     public static Store getInstance(){

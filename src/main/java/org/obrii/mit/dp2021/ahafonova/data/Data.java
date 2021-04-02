@@ -25,12 +25,14 @@ public class Data implements Serializable{
     private String email;
     private String country;
 
-    public Data(int id, String name, String email, String country) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.country = country;
-    }
+   // public Data(int id, String name, String email, String country) {
+    //    this.id = id;
+      //  this.name = name;
+        //this.email = email;
+        //this.country = country;
+    //}
+    public Data() {}
+    
     public Data(String name, String email, String country) {
         
         this.name = name;
