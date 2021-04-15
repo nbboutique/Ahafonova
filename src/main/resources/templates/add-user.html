@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: pink">
+        <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
+            <p><input class="form__input" type="text" th:field="*{name}" id="name" placeholder="First name" required></p>
+            <p><input class="form__input" type="text" th:field="*{surname}" id="surname" placeholder="Surname" required></p>
+            <p><input class="form__input" type="text" th:field="*{email}" id="email" placeholder="Email" required></p>
+            <button class="section_btn btn" type="submit">Submit</button> 
+        </form>
+    </body>
+</html>

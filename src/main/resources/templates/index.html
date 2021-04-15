@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: pink">
+        <div th:switch="${users}">
+                <h2 th:case="null">No users yet!</h2>
+                <div th:case="*">
+                    <h2>Users</h2>
+                    <table style="border: solid 2px">
+                        <thead>
+                            <tr >
+                                <th style="border: solid 2px">Name</th>
+                                 <th style="border: solid 2px">Surname</th>
+                                <th style="border: solid 2px">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody style="border: solid 2px">
+                            <tr th:each="user : ${users}">
+                                <td style="border: solid 2px" th:text="${user.name}"></td>
+                                 <td style="border: solid 2px" th:text="${user.surname}"></td>
+                                <td style="border: solid 2px" th:text="${user.email}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>      
+                <form action="./signup" method="get">
+                    <button style="background-color: yellow; margin: 20px" type="submit">Create Form</button>
+                </form>
+            </div>
+      
+    </body>
+</html>
