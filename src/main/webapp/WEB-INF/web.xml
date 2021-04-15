@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>FormServlet</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.khomik.mavenproject3.FormUPD</servlet-class>
+        <servlet-class>org.obrii.mit.dp2021.ahafonova.mavenproject3.FormUPD</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DataCrudServlet</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.khomik.mavenproject3.DataServlet</servlet-class>
+        <servlet-class>org.obrii.mit.dp2021.ahafonova.mavenproject3.DataServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FormServlet</servlet-name>
